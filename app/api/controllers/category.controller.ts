@@ -9,7 +9,7 @@ class CategoryController {
 
         let categories: Category[] | null = null;
 
-        await fetch(url + '/data/category-list.json')
+        await fetch('https://recipe-website-next-git-development-eamonboyle.vercel.app/data/category-list.json')
             .then((response) => response.json())
             .then((data) => {
                 categories = <Category[]>data;
