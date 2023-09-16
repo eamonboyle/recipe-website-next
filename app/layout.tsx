@@ -6,7 +6,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
-
+2
 export const metadata: Metadata = {
   title: 'Recipe Website',
   description: 'Database of tasy recipes',
@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen">
-          <Header title={metadata.title?.toString()} description={metadata.description?.toString()} />
+          <Header title={metadata.title?.toString()} />
 
           <div className='flex-grow'>
             <main className="container mx-auto py-4 px-8">
@@ -29,7 +29,7 @@ export default function RootLayout({
             </main>
           </div>
 
-          <Footer title={metadata.title?.toString()} description={metadata.description?.toString()} />
+          <Footer title={metadata.title?.toString()} />
         </div>
       </body>
     </html>
