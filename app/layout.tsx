@@ -6,7 +6,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
-2
+
 export const metadata: Metadata = {
   title: 'Recipe Website',
   description: 'Database of tasy recipes',
