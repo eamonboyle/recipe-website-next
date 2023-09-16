@@ -3,7 +3,6 @@ import path from 'path';
 
 const dataReader = <T>(fileName: string, folderPath: string): T | null => {
     const filePath = path.join(__dirname, '..', folderPath, fileName);
-    console.log(filePath);
     try {
         const data = fs.readFileSync(filePath, 'utf8');
         return JSON.parse(data) as T;
