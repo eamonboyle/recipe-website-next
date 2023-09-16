@@ -15,7 +15,7 @@ export default function Page() {
 
     return (
         <div className="categories-container">
-            <h3 className="text-xl font-bold categories-title">Categories {categories.length}</h3>
+            <h3 className="text-xl font-bold categories-title">Categories {categories && categories.length}</h3>
 
             <div className="categories-categories">
                 <div className="category">
