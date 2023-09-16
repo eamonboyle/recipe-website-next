@@ -4,17 +4,7 @@ import { NextRequest } from "next/server";
 
 class CategoryController {
     public static async getAll(request: NextRequest): Promise<Category[] | null> {
-        // split the url before /api
-        let url = request.nextUrl.href.split('/api')[0]
-
-        let categories: Category[] | null = null;
-
-        await fetch('https://recipe-website-next-git-development-eamonboyle.vercel.app/data/category-list.json')
-            .then((response) => response.json())
-            .then((data) => {
-                categories = <Category[]>data;
-            })
-
+        let categories = dataReader<Category[]>('category-list.json', '../../../../app/api/data/categories');
         return categories;
     }
 
