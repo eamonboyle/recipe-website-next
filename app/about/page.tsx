@@ -7,8 +7,8 @@ export default function Page() {
                 </h1>
                 <p className="text-lg mb-6">
                     We have a wide variety of recipes to choose from, including everything from
-                    classic comfort food to trendy new dishes. Whether you're a beginner or a
-                    seasoned cook, you're sure to find something to your taste.
+                    classic comfort food to trendy new dishes. Whether you&apos;re a beginner or a
+                    seasoned cook, you&apos;re sure to find something to your taste.
                 </p>
                 <p className="text-lg mb-6">
                     In addition to our curated collection of recipes, we also allow you to add
@@ -57,8 +57,8 @@ export default function Page() {
                 </p>
                 <p className="text-lg mb-6">
                     We want [recipe website name] to be your go-to resource for all things food.
-                    If you have any suggestions or feedback, please don't hesitate to contact
-                    us. We're always looking for ways to improve the website and make it more
+                    If you have any suggestions or feedback, please don&apos;t hesitate to contact
+                    us. We&apos;re always looking for ways to improve the website and make it more
                     user-friendly.
                 </p>
                 <p className="text-lg">Enjoy cooking and eating!</p>
