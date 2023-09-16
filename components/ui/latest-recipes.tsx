@@ -24,13 +24,13 @@ const LatestRecipes: React.FC<LatestRecipesProps> = () => {
             link: "/recipes/1"
         },
         {
-            id: "3",
+            id: "4",
             name: "Mighty Super Cheesecake",
             imageUrl: "https://th.bing.com/th/id/R.ab4a2592b98e2cfcb0f25d89326d78ee?rik=%2bJvWwZLOkrlHYA&riu=http%3a%2f%2fwww.baltana.com%2ffiles%2fwallpapers-1%2fCheesecake-HD-Images-03401.jpg&ehk=i3GdsmQJ6pI8oA6YUMqzwegxxiJfYVUi9nywPwegAc0%3d&risl=&pid=ImgRaw&r=0",
             link: "/recipes/1"
         },
         {
-            id: "3",
+            id: "5",
             name: "Mighty Super Cheesecake",
             imageUrl: "https://th.bing.com/th/id/R.ab4a2592b98e2cfcb0f25d89326d78ee?rik=%2bJvWwZLOkrlHYA&riu=http%3a%2f%2fwww.baltana.com%2ffiles%2fwallpapers-1%2fCheesecake-HD-Images-03401.jpg&ehk=i3GdsmQJ6pI8oA6YUMqzwegxxiJfYVUi9nywPwegAc0%3d&risl=&pid=ImgRaw&r=0",
             link: "/recipes/1"
