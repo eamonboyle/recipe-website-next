@@ -1,4 +1,4 @@
-import { getAllRecipes } from "@/controllers/recipe.controller";
+import { getRandomRecipe } from "@/controllers/recipe.controller";
 import { getDatabaseClient } from "@/services/database.service";
 
 export async function GET(request: Request) {
@@ -6,8 +6,8 @@ export async function GET(request: Request) {
 
     try {
         if (request.method === 'GET') {
-            const recipes = await getAllRecipes(client, 100);
-            return new Response(JSON.stringify(recipes), { status: 200 })
+            const recipe = await getRandomRecipe(client);
+            return new Response(JSON.stringify(recipe), { status: 200 })
         }
     } catch (error) {
         return new Response(JSON.stringify(error), { status: 500 })

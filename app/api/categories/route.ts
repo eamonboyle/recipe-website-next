@@ -1,14 +1,17 @@
-import { Category } from "@/types/category";
-import { CategoryController } from "../controllers";
-import { NextRequest } from "next/server";
+import { getAllCategories } from "@/controllers/category.controller";
+import { getDatabaseClient } from "@/services/database.service";
 
-export async function GET(request: NextRequest) {
-    let categories: Category[] | null = await CategoryController.getAll(request).then((categories) => {
-        return categories;
-    }).catch((err) => {
-        console.error(`Error reading file: ${err}`);
-        return null;
-    })
+export async function GET(request: Request) {
+    const client = await getDatabaseClient();
 
-    return new Response(JSON.stringify(categories), { status: 200 })
+    try {
+        if (request.method === 'GET') {
+            const recipes = await getAllCategories(client, 100);
+            return new Response(JSON.stringify(recipes), { status: 200 })
+        }
+    } catch (error) {
+        return new Response(JSON.stringify(error), { status: 500 })
+    } finally {
+        client.release();
+    }
 }

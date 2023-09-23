@@ -6,7 +6,6 @@ import PopularCategories from "@/components/ui/popular-categories";
 export default function Home() {
   return (
     <>
-
       <Jumbotron
         title="Mighty Super Cheesecake"
         description="Look no further for a creamy and ultra smooth classic cheesecake recipe! No one can deny its simple decadence, its velvety texture, or that it's the BEST!"

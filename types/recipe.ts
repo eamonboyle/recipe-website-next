@@ -1,17 +1,15 @@
-export interface Recipe {
-    id: string;
-    name?: string;
-    description?: string;
-    ingredients?: Ingredient[];
-    steps?: string[];
-    imageUrl?: string;
-    originalUrl?: string;
-    tags?: string[];
-    link?: string;
+export type Recipe_Small = {
+    id: number
+    recipe_name: string
+    description: string
+    image_url: string
 }
 
-export interface Ingredient {
-    name: string;
-    quantity: number;
-    unit: string;
-}
+// export type Recipe_Full = {
+//     id: number
+//     recipe_name: string
+//     description: string
+//     image_url: string
+//     ingredients: Ingredient[]
+//     instructions: Instruction[]
+// }

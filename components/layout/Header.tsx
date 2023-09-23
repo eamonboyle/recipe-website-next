@@ -28,6 +28,11 @@ export default function Header({ title }: HeaderProps) {
                             </a>
                         </li>
                         <li>
+                            <a href="/categories" className="text-black p-2 hover:text-gray-100 hover:bg-slate-500 transition-all rounded-sm">
+                                Categories
+                            </a>
+                        </li>
+                        <li>
                             <a href="/recipes" className="text-black p-2 hover:text-gray-100 hover:bg-slate-500 transition-all rounded-sm">
                                 Recipes
                             </a>

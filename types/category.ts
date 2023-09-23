@@ -1,9 +1,6 @@
-export interface Category {
-    id: string;
-    name?: string;
-    description?: string;
-    subcategories?: Category[];
-    parent?: Category;
-    imageUrl?: string;
-    active?: boolean;
+export type Category = {
+    id: number
+    name: string
+    description: string
+    image_url: string
 }
