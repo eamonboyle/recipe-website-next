@@ -2,16 +2,27 @@ import Jumbotron from "@/components/layout/Jumbotron";
 import FeaturedRecipes from "@/components/ui/featured-recipes";
 import { LatestRecipes } from "@/components/ui/latest-recipes";
 import PopularCategories from "@/components/ui/popular-categories";
+import { slugify } from "@/utils/slugify";
 
-export default function Home() {
+async function fetchRecipeData(endpoint: string) {
+  const res = await fetch(`http://localhost:3000/api/recipes/${endpoint}`);
+  const data = await res.json();
+  return data;
+}
+
+export default async function Home() {
+  const jumbotronData = await fetchRecipeData('random')
+  const featuredRecipes = await fetchRecipeData('featured')
+  const latestRecipes = await fetchRecipeData('latest')
+
   return (
     <>
       <Jumbotron
-        title="Mighty Super Cheesecake"
-        description="Look no further for a creamy and ultra smooth classic cheesecake recipe! No one can deny its simple decadence, its velvety texture, or that it's the BEST!"
-        image="https://th.bing.com/th/id/R.ab4a2592b98e2cfcb0f25d89326d78ee?rik=%2bJvWwZLOkrlHYA&riu=http%3a%2f%2fwww.baltana.com%2ffiles%2fwallpapers-1%2fCheesecake-HD-Images-03401.jpg&ehk=i3GdsmQJ6pI8oA6YUMqzwegxxiJfYVUi9nywPwegAc0%3d&risl=&pid=ImgRaw&r=0"
+        title={jumbotronData.recipe_name}
+        description={jumbotronData.description}
+        image={jumbotronData.image_url}
         buttonText="View Recipe"
-        buttonLink="/recipes"
+        buttonLink={"/recipes/" + slugify(jumbotronData.recipe_name)}
       />
 
       <FeaturedRecipes title="Super Delicious" recipes={[
@@ -99,7 +110,7 @@ export default function Home() {
         }
       ]} />
 
-      <LatestRecipes />
+      <LatestRecipes recipes={latestRecipes} />
 
     </>
   )
