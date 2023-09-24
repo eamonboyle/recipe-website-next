@@ -10,7 +10,7 @@ export default function Footer({ title }: FooterProps) {
                     <div className="w-full md:w-1/3 sm:w-full">
                         <h3 className="text-2xl font-bold mb-4 text-gray-700">{title}</h3>
                         <p className="text-gray-700 italic">
-                            Welcome to Recipe Share, your go-to destination for all things delicious and culinary. We're passionate about bringing people together through the love of food. Our platform is a hub for food enthusiasts, both seasoned cooks and kitchen newcomers, to explore, create, and share the flavors of the world.
+                            Welcome to Recipe Share, your go-to destination for all things delicious and culinary. We&apos;re passionate about bringing people together through the love of food. Our platform is a hub for food enthusiasts, both seasoned cooks and kitchen newcomers, to explore, create, and share the flavors of the world.
                         </p>
                     </div>
                     <div className="w-full md:w-1/2">
