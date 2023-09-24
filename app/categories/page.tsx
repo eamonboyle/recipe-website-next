@@ -1,7 +1,6 @@
 "use client"
 
 import { Category } from '@/types/category'
-import { slugify } from '@/utils/slugify'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
@@ -22,7 +21,7 @@ export default function Page() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6">
                 {categories?.map((category) => (
                     <div className="hover:scale-105 transform transform-transform duration-300" key={category.id}>
-                        <a href={`/categories/${slugify(category.name)}`} className="category-link">
+                        <a href={`/categories/${category.slug}`} className="category-link">
                             <div className="image">
                                 <Image src={category.image_url ??
                                     'https://placehold.co/1000x1000.png'} width={200} height={200} alt="image" className='w-full h-48 object-cover rounded-lg' />

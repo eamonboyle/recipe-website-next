@@ -1,4 +1,4 @@
-import { getLatestRecipes } from "@/controllers/recipe.controller";
+import { getLatestRecipes } from "@/app/controllers/recipe.controller";
 import { getDatabaseClient } from "@/services/database.service";
 
 export async function GET(request: Request) {

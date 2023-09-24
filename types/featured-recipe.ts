@@ -1,6 +1,7 @@
 export interface FeaturedRecipe {
-    title: string;
-    rating: number;
-    imageUrl: string;
-    recipeLink: string;
+    id: number;
+    recipe_name: string;
+    slug: string;
+    author?: string;
+    image_url: string;
 }

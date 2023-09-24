@@ -1,6 +1,7 @@
 export type Recipe_Small = {
     id: number
     recipe_name: string
+    slug: string
     description: string
     image_url: string
 }

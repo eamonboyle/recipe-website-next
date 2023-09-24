@@ -1,5 +1,7 @@
 export interface FeaturedCategory {
-    title: string;
-    image: string;
-    link: string;
+    id: number;
+    name: string;
+    slug: string;
+    image_url: string;
+    recipe_count?: number;
 }

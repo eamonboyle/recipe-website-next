@@ -1,67 +1,36 @@
 export default function Page() {
     return (
         <>
-            <div className="py-10">
-                <h1 className="text-3xl font-bold mb-5">
-                    Welcome to [recipe website name]!
-                </h1>
+            <div className="py-5">
+                <h3 className="text-2xl font-bold mb-3">
+                    About Recipe Share
+                </h3>
                 <p className="text-lg mb-6">
-                    We have a wide variety of recipes to choose from, including everything from
-                    classic comfort food to trendy new dishes. Whether you&apos;re a beginner or a
-                    seasoned cook, you&apos;re sure to find something to your taste.
+                    Welcome to Recipe Share, your go-to destination for all things delicious and culinary. We're passionate about bringing people together through the love of food. Our platform is a hub for food enthusiasts, both seasoned cooks and kitchen newcomers, to explore, create, and share the flavors of the world.
                 </p>
+                <h3 className="text-2xl font-bold mb-3">
+                    Discover & Create
+                </h3>
                 <p className="text-lg mb-6">
-                    In addition to our curated collection of recipes, we also allow you to add
-                    your own recipes to the website. This is a great way to share your favorite
-                    dishes with others, and to build your own personal cookbook.
+                    Recipe Share is your culinary playground, where inspiration knows no bounds. Discover a treasure trove of mouthwatering recipes from every corner of the globe. Whether you're craving comfort food classics or seeking adventurous new tastes, we've got you covered. Our intuitive recipe creation tools make it a breeze to craft your own culinary masterpieces, so you can share your unique dishes with the world.
                 </p>
-                <h2 className="text-2xl font-bold mb-2">
-                    Here are just a few of the things you can do on [recipe website name]:
-                </h2>
-                <ul className="list-disc pl-6">
-                    <li className="text-lg mb-2">
-                        Browse our collection of recipes by category, cuisine, or ingredient.
-                    </li>
-                    <li className="text-lg mb-2">Search for recipes by keyword or phrase.</li>
-                    <li className="text-lg mb-2">
-                        Save your favorite recipes to your own personal cookbook.
-                    </li>
-                    <li className="text-lg mb-2">Add your own recipes to the website.</li>
-                    <li className="text-lg mb-2">Leave comments and ratings on recipes.</li>
-                    <li className="text-lg mb-2">
-                        Share recipes with your friends and family on social media.
-                    </li>
-                </ul>
+                <h3 className="text-2xl font-bold mb-3">
+                    Connect & Share
+                </h3>
                 <p className="text-lg mb-6">
-                    We hope you enjoy using [recipe website name]!**
+                    Cooking is better when it's shared with friends. With Recipe Share, you'll connect with a vibrant community of fellow food lovers. Create your own profile, customize it to reflect your culinary style, and start following your favorite recipe creators. Stay up-to-date with their latest creations and never miss a beat in the culinary world.
                 </p>
-                {/* Additional copy ideas */}
-                <h3 className="text-2xl font-bold">Looking for inspiration?</h3>
+                <h3 className="text-2xl font-bold mb-3">
+                    Celebrate Food & Community
+                </h3>
                 <p className="text-lg mb-6">
-                    Check out our featured recipes, which are updated regularly with new and
-                    delicious dishes.
+                    At Recipe Share, we believe that food has the power to connect people, spark creativity, and spread joy. Whether you're a home cook, a professional chef, or simply someone who appreciates a good meal, you're invited to be a part of our food-loving family. Together, we celebrate the joy of cooking, the beauty of diversity in cuisine, and the warmth of sharing a meal with loved ones.
+
+                    Join us on this flavorful journey, where every recipe is a story waiting to be told, and every meal shared is a moment to remember. Explore, create, connect, and savor the magic of Recipe Share.
                 </p>
-                <h3 className="text-2xl font-bold">Need a quick and easy meal?</h3>
-                <p className="text-lg mb-6">
-                    We have a wide variety of recipes that can be made in 30 minutes or less.
-                </p>
-                <h3 className="text-2xl font-bold">On a budget?</h3>
-                <p className="text-lg mb-6">
-                    We have a collection of budget-friendly recipes that are still delicious and
-                    satisfying.
-                </p>
-                <h3 className="text-2xl font-bold">Have a dietary restriction?</h3>
-                <p className="text-lg mb-6">
-                    We have a variety of recipes that are gluten-free, dairy-free, vegetarian,
-                    or vegan.
-                </p>
-                <p className="text-lg mb-6">
-                    We want [recipe website name] to be your go-to resource for all things food.
-                    If you have any suggestions or feedback, please don&apos;t hesitate to contact
-                    us. We&apos;re always looking for ways to improve the website and make it more
-                    user-friendly.
-                </p>
-                <p className="text-lg">Enjoy cooking and eating!</p>
+                <h3 className="text-2xl font-bold mb-3">
+                    Bon appétit!
+                </h3>
             </div>
         </>
     )

@@ -1,4 +1,6 @@
+import Image from "next/image"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
+import { Button } from "../ui/button"
 
 type HeaderProps = {
     title?: string
@@ -9,7 +11,9 @@ export default function Header({ title }: HeaderProps) {
         <header className="sticky text-black border-b-sky-100 border-b py-5">
             <div className="container mx-auto py-4 px-8 flex justify-between items-center">
                 <div className="flex items-center">
-                    <a href="/">
+                    <a href="/" className="flex flex-row">
+                        <Image src="/images/logo-black.png" alt="Logo" width={30} height={20} className="mr-3" />
+                        {/* <h1 className="text-3xl font-semibold tracking-tight transition-colors first:mt-0" style={{ color: '#586e0d' }}> */}
                         <h1 className="text-3xl font-semibold tracking-tight transition-colors first:mt-0">
                             {title}
                         </h1>
@@ -64,10 +68,13 @@ export default function Header({ title }: HeaderProps) {
                     </div>
 
                     <div className="profileIcon">
-                        <Avatar>
+                        <Button variant="outline" size="sm" className="mr-2">
+                            Login
+                        </Button>
+                        {/* <Avatar>
                             <AvatarImage src="https://avatars.githubusercontent.com/u/5817313?s=400&u=d81411a58668e6cc581154f7de0959feb67108c4&v=4" alt="Profile" />
                             <AvatarFallback>EB</AvatarFallback>
-                        </Avatar>
+                        </Avatar> */}
                     </div>
                 </div>
             </div>

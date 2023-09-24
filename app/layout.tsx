@@ -8,8 +8,8 @@ import Footer from '@/components/layout/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Recipe Website',
-  description: 'Database of tasy recipes',
+  title: 'Share Recipe',
+  description: 'Share and find recipes from around the world.',
 }
 
 export default function RootLayout({
@@ -19,6 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="description" content={metadata.description?.toString()} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/images/favicon/favicon.ico" />
+      </head>
       <body className={inter.className}>
         <div className="flex flex-col min-h-screen">
           <Header title={metadata.title?.toString()} />

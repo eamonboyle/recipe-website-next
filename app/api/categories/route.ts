@@ -1,4 +1,4 @@
-import { getAllCategories } from "@/controllers/category.controller";
+import { getAllCategories } from "@/app/controllers/category.controller";
 import { getDatabaseClient } from "@/services/database.service";
 
 export async function GET(request: Request) {

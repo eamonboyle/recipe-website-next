@@ -1,15 +1,17 @@
-import { Category } from "@/types/category";
-import { NextRequest } from "next/server";
-import { CategoryController } from "../../controllers";
+import { getAllCategories } from "@/app/controllers/category.controller";
+import { getDatabaseClient } from "@/services/database.service";
 
-export async function GET(request: NextRequest, { params }: { params: { slug: string } }) {
+export async function GET(request: Request) {
+    const client = await getDatabaseClient();
 
-    let category: Category | null = await CategoryController.getOne(params.slug).then((category) => {
-        return category;
-    }).catch((err) => {
-        console.error(`Error reading file: ${err}`);
-        return null;
-    })
-
-    return new Response(JSON.stringify(category), { status: 200 })
+    try {
+        if (request.method === 'GET') {
+            const recipes = await getAllCategories(client, 100);
+            return new Response(JSON.stringify(recipes), { status: 200 })
+        }
+    } catch (error) {
+        return new Response(JSON.stringify(error), { status: 500 })
+    } finally {
+        client.release();
+    }
 }

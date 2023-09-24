@@ -1,5 +1,4 @@
 import { Recipe_Small } from "@/types/recipe";
-import { slugify } from "@/utils/slugify";
 
 type LatestRecipesProps = {
     recipes: Recipe_Small[];
@@ -15,7 +14,7 @@ const LatestRecipes: React.FC<LatestRecipesProps> = ({ recipes }) => {
                     recipes.map((recipe) => (
                         <div className="flex-grow-1" key={recipe.id}>
                             <div>
-                                <a href={`/recipes/${slugify(recipe.recipe_name)}`}>
+                                <a href={`/recipes/${recipe.slug}`}>
                                     <img
                                         src={recipe.image_url}
                                         alt={recipe.recipe_name}
