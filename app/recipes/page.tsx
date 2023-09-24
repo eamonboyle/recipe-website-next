@@ -16,18 +16,19 @@ export default function Page() {
     }, [])
 
     return (
-        <div className="categories-container">
-            <h3 className="text-xl font-bold categories-title">Recipes {recipes?.length}</h3>
+        <div className="grid-container">
+            <h3 className="text-2xl font-semibold mb-4">Recipes</h3>
 
-            <div className="categories-categories flex flex-row flex-wrap gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6">
                 {recipes?.map((recipe) => (
-                    <div className="category" key={recipe.id}>
-                        <a href={`/recipes/${recipe.id}`} className="category-link">
-                            <div className="category-image">
-                                <Image src={recipe.image_url} width={200} height={200} alt="image" />
-                                a</div>
-                            <div className="category-text">
-                                <h4 className="category-name">{recipe.recipe_name}</h4>
+                    <div className="hover:scale-105 transform transform-transform duration-300" key={recipe.id}>
+                        <a href={`/categories/${recipe.slug}`} className="category-link">
+                            <div className="image">
+                                <Image src={recipe.image_url ??
+                                    'https://placehold.co/1000x1000.png'} width={200} height={200} alt="image" className='w-full h-48 object-cover rounded-lg' />
+                            </div>
+                            <div className="text text-center my-2">
+                                <h4 className="category-name font-bold mb-4 text-gray-900">{recipe.recipe_name}</h4>
                             </div>
                         </a>
                     </div>

@@ -8,7 +8,7 @@ export async function getAllCategories(client: PoolClient, limit: number | undef
         r.image_url
     FROM
         recipe_categories c
-    LEFT JOIN (
+    INNER JOIN (
         SELECT
             rtc.category_id,
             MIN(r.image_url) AS image_url

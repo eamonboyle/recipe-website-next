@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 import { Button } from "../ui/button"
+import Link from "next/link"
 
 type HeaderProps = {
     title?: string
@@ -13,8 +14,7 @@ export default function Header({ title }: HeaderProps) {
                 <div className="flex items-center">
                     <a href="/" className="flex flex-row">
                         <Image src="/images/logo-black.png" alt="Logo" width={30} height={20} className="mr-3" />
-                        {/* <h1 className="text-3xl font-semibold tracking-tight transition-colors first:mt-0" style={{ color: '#586e0d' }}> */}
-                        <h1 className="text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+                        <h1 className="text-3xl font-semibold tracking-tight transition-colors first:mt-0 text-orange-500">
                             {title}
                         </h1>
                     </a>
@@ -50,25 +50,27 @@ export default function Header({ title }: HeaderProps) {
                 </nav>
                 <div className="flex items-center space-x-2">
                     <div className="search-container">
-                        <svg
-                            className="h-8 w-8 text-black"
-                            width={24}
-                            height={24}
-                            viewBox="0 0 24 24"
-                            strokeWidth={2}
-                            stroke="currentColor"
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        >
-                            {" "}
-                            <path stroke="none" d="M0 0h24v24H0z" /> <circle cx={10} cy={10} r={7} />{" "}
-                            <line x1={21} y1={21} x2={15} y2={15} />
-                        </svg>
+                        <Link href="/search">
+                            <svg
+                                className="h-8 w-8 text-black"
+                                width={24}
+                                height={24}
+                                viewBox="0 0 24 24"
+                                strokeWidth={2}
+                                stroke="currentColor"
+                                fill="none"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            >
+                                {" "}
+                                <path stroke="none" d="M0 0h24v24H0z" /> <circle cx={10} cy={10} r={7} />{" "}
+                                <line x1={21} y1={21} x2={15} y2={15} />
+                            </svg>
+                        </Link>
                     </div>
 
                     <div className="profileIcon">
-                        <Button variant="outline" size="sm" className="mr-2">
+                        <Button variant="default" size="sm" className="mr-2">
                             Login
                         </Button>
                         {/* <Avatar>

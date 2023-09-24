@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 type JumbotronProps = {
     title: string;
@@ -22,11 +23,11 @@ const Jumbotron: React.FC<JumbotronProps> = ({ title, description, buttonText, b
                 <p className="text-gray-700 text-center md:text-left">
                     {description}
                 </p>
-                <Button variant="default" size="lg" className="mt-4 w-full">
-                    <a href={buttonLink}>
+                <Link href={buttonLink}>
+                    <Button variant="default" size="lg" className="mt-4 w-full">
                         {buttonText}
-                    </a>
-                </Button>
+                    </Button>
+                </Link>
             </div>
         </div>
     )
