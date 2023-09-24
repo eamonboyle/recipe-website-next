@@ -5,9 +5,7 @@ type RecipeContentProps = {
 }
 
 export default function RecipeContent({ recipe }: RecipeContentProps) {
-    let instructions = recipe.instructions;
-
-    const lines = instructions.split('.');
+    const lines = recipe.instructions.split('.');
 
     // remove empty lines
     lines.forEach((line, index) => {

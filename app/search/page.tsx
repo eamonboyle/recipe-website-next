@@ -14,7 +14,7 @@ async function fetchRecipeData(endpoint: string, limit = 8, offset = 0) {
 }
 
 export default function Page() {
-    const [searchQuery, setSearchQuery] = useState('pancakes');
+    const [searchQuery, setSearchQuery] = useState('');
     const [recipes, setRecipes] = useState<Recipe_Full[]>([]);
     const [offset, setOffset] = useState(0);
     const [hasMore, setHasMore] = useState(true);
@@ -36,11 +36,17 @@ export default function Page() {
         setOffset(offset + 8);
     }
 
+    const handleSearchQueryChanged = (e: any) => {
+        setSearchQuery(e.target.value);
+        setOffset(0);
+        setRecipes([]);
+    }
+
     return (
         <>
             <div className="search-container">
                 <div className="search-input">
-                    <Input placeholder="Search for recipes" onChange={(e) => setSearchQuery(e.target.value)} />
+                    <Input placeholder="Search for recipes" onChange={handleSearchQueryChanged} />
                 </div>
             </div>
 

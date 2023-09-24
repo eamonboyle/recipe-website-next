@@ -1,5 +1,5 @@
 import { Pool } from 'pg';
-import sql, { ConnectionPool } from 'mssql'
+import sql from 'mssql'
 
 const pool = new Pool({
     user: process.env.PUBLIC_POSTGRES_USER,
