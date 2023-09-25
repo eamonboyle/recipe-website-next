@@ -4,13 +4,13 @@ import { LatestRecipes } from "@/components/ui/latest-recipes";
 import PopularCategories from "@/components/ui/popular-categories";
 
 async function fetchRecipeData(endpoint: string) {
-  const res = await fetch(`http://localhost:3000/api/recipes/${endpoint}`);
+  const res = await fetch(`/api/recipes/${endpoint}`);
   const data = await res.json();
   return data;
 }
 
 async function fetchCategoryData(endpoint: string) {
-  const res = await fetch(`http://localhost:3000/api/categories/${endpoint}`);
+  const res = await fetch(`/api/categories/${endpoint}`);
   const data = await res.json();
   return data;
 }
