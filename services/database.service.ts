@@ -2,6 +2,11 @@ import { Pool } from 'pg';
 import sql from 'mssql'
 
 const pool = new Pool({
+    // user: process.env.PUBLIC_POSTGRES_USER,
+    // host: process.env.PUBLIC_POSTGRES_HOST,
+    // database: process.env.PUBLIC_POSTGRES_DATABASE,
+    // password: process.env.PUBLIC_POSTGRES_PASSWORD,
+
     user: process.env.PUBLIC_POSTGRES_USER,
     host: process.env.PUBLIC_POSTGRES_HOST,
     database: process.env.PUBLIC_POSTGRES_DATABASE,
