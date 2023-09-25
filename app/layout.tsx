@@ -2,6 +2,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
+import { Analytics } from '@vercel/analytics/react';
+
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 
@@ -32,6 +34,7 @@ export default function RootLayout({
           <div className='flex-grow'>
             <main className="container mx-auto py-4 px-8">
               {children}
+              <Analytics />
             </main>
           </div>
 

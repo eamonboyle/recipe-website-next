@@ -6,18 +6,13 @@ import PopularCategories from "@/components/ui/popular-categories";
 export const dynamic = 'force-dynamic';
 
 async function fetchRecipeData(endpoint: string) {
-  // if on development, use localhost
-  // if on production, use the domain name
-  const url = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://recipe-website-next-git-development-eamonboyle.vercel.app'
-
-  const res = await fetch(`${url}/api/recipes/${endpoint}`, { cache: 'no-store' });
+  const res = await fetch(`${process.env.PROJECT_URL}/api/recipes/${endpoint}`, { cache: 'no-store' });
   const data = await res.json();
   return data;
 }
 
 async function fetchCategoryData(endpoint: string) {
-  const url = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://recipe-website-next-git-development-eamonboyle.vercel.app'
-  const res = await fetch(`${url}/api/categories/${endpoint}`, { cache: 'no-store' });
+  const res = await fetch(`${process.env.PROJECT_URL}/api/categories/${endpoint}`, { cache: 'no-store' });
   const data = await res.json();
   return data;
 }
