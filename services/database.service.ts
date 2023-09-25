@@ -19,22 +19,22 @@ export const getDatabaseClient = async () => {
     return client;
 }
 
-const dbConfig = {
-    server: String(process.env.PUBLIC_MSSQL_SERVER), // Replace with your SQL Server address
-    database: process.env.PUBLIC_MSSQL_DATABASE, // Replace with your database name
-    user: process.env.PUBLIC_MSSQL_USER, // Replace with your username
-    password: process.env.PUBLIC_MSSQL_PASSWORD, // Replace with your password
-    options: {
-        encrypt: true, // For encrypted connection
-    },
-};
+// const dbConfig = {
+//     server: String(process.env.PUBLIC_MSSQL_SERVER), // Replace with your SQL Server address
+//     database: process.env.PUBLIC_MSSQL_DATABASE, // Replace with your database name
+//     user: process.env.PUBLIC_MSSQL_USER, // Replace with your username
+//     password: process.env.PUBLIC_MSSQL_PASSWORD, // Replace with your password
+//     options: {
+//         encrypt: true, // For encrypted connection
+//     },
+// };
 
-export async function connectToDatabase() {
-    try {
-        const pool = await sql.connect(dbConfig);
-        return pool;
-    } catch (error) {
-        console.error('Database connection error', error);
-        throw error;
-    }
-}
+// export async function connectToDatabase() {
+//     try {
+//         const pool = await sql.connect(dbConfig);
+//         return pool;
+//     } catch (error) {
+//         console.error('Database connection error', error);
+//         throw error;
+//     }
+// }

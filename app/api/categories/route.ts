@@ -1,5 +1,5 @@
 import { getAllCategories } from "@/app/controllers/category.controller";
-import { connectToDatabase, getDatabaseClient } from "@/services/database.service";
+import { getDatabaseClient } from "@/services/database.service";
 
 export async function GET(request: Request) {
 
