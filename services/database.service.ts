@@ -7,10 +7,10 @@ const pool = new Pool({
     // database: process.env.PUBLIC_POSTGRES_DATABASE,
     // password: process.env.PUBLIC_POSTGRES_PASSWORD,
 
-    user: process.env.POSTGRES_USER,
-    host: process.env.POSTGRES_HOST,
-    database: process.env.POSTGRES_DATABASE,
-    password: process.env.POSTGRES_PASSWORD,
+    user: process.env.PUBLIC_POSTGRES_USER,
+    host: process.env.PUBLIC_POSTGRES_HOST,
+    database: process.env.PUBLIC_POSTGRES_DATABASE,
+    password: process.env.PUBLIC_POSTGRES_PASSWORD,
     port: 5432,
     ssl: {
         rejectUnauthorized: false
