@@ -39,5 +39,6 @@ photoshop
 next-env.d.ts
 .snaplet/snapshots
 .snaplet/snaplet.d.ts
-.snaplet/*
+.snaplet
 .vercel
+snaplet.config.ts
