@@ -8,7 +8,7 @@ import Image from "next/image";
 import { Recipe_Full } from "@/types/recipe";
 
 async function fetchRecipeData(endpoint: string, limit = 8, offset = 0) {
-    const res = await fetch(`http://localhost:3000/api/recipes/${endpoint}?limit=${limit}&offset=${offset}`);
+    const res = await fetch(`${process.env.PROJECT_URL}/api/recipes/${endpoint}?limit=${limit}&offset=${offset}`);
     const data = await res.json();
     return data;
 }

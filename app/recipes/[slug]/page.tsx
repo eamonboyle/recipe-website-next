@@ -7,7 +7,7 @@ import RecipeMetaData from '@/components/recipe/recipe-metadata';
 import { Recipe_Full } from '@/types/recipe';
 
 async function fetchRecipeData(endpoint: string) {
-    const res = await fetch(`http://localhost:3000/api/recipes/bySlug/${endpoint}`);
+    const res = await fetch(`${process.env.PROJECT_URL}/api/recipes/bySlug/${endpoint}`);
     const data = await res.json();
     return data;
 }
