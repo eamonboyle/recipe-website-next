@@ -17,7 +17,7 @@ export async function GET(request: Request, { params }: { params: { slug: string
     JOIN
         recipe_categories c ON rtc.category_id = c.id
     WHERE
-        c.slug = $1
+        c.slug = ${params.slug}
     ORDER BY r.recipe_name 
     LIMIT 100;`;
 
